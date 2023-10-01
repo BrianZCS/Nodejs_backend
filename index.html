@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Page for Backend</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1>Hello, Fetch</h1>
+<p>Add Points</p>
+
+<form action="http://localhost:8000/add" method="post" id = "myForm">
+    <label for="payer">Payer:</label><br>
+    <input type="text" id="payer" name="payer"><br>
+    <label for="points">Points:</label><br>
+    <input type="number" id="points" name="points"><br>
+    <label for="timestamp">Timestamp:</label><br>
+    <input type="text" id="timestamp" name="timestamp"><br>
+    <input type="submit" value="Submit">
+  </form><br>
+  <script>
+    //code borrowed from https://stackoverflow.com/questions/53107833/how-to-post-form-data-as-json
+    const serialize_form = form => JSON.stringify(
+      Array.from(new FormData(form).entries())
+           .reduce((m, [ key, value ]) => Object.assign(m, { [key]: value }), {})
+    );
+    
+    $('#myForm').on('submit', function(event) {
+      event.preventDefault();
+      const json = serialize_form(this);
+      console.log(json);
+      $.ajax({
+        type: 'POST',
+        url: 'http://localhost:8000/add',
+        dataType: 'json',
+        data: json,
+        contentType: 'application/json',
+      });
+    });
+    </script>
+<p> Spend Points</p>
+<form action="http://localhost:8000/spend" method="post" id = "spendForm">
+    <label for="points">Points:</label><br>
+    <input type="number" id="points" name="points"><br>
+    <input type="submit" value="Submit">
+  </form><br>
+  <script>
+    //code borrowed from https://stackoverflow.com/questions/53107833/how-to-post-form-data-as-json
+    const serialize_form_spend = form => JSON.stringify(
+      Array.from(new FormData(form).entries())
+           .reduce((m, [ key, value ]) => Object.assign(m, { [key]: value }), {})
+    );
+    
+    $('#spendForm').on('submit', function(event) {
+      event.preventDefault();
+      const json = serialize_form(this);
+      console.log(json);
+      $.ajax({
+        type: 'POST',
+        url: 'http://localhost:8000/spend',
+        dataType: 'json',
+        data: json,
+        contentType: 'application/json',
+      });
+    });
+    </script>
+  <p> Click to Get Points Balance</p>
+  <button onclick="location.href = 'http://localhost:8000/balance';" id="myButton" class="submit-button" >Check!</button>
+</body>
+</html>
+
