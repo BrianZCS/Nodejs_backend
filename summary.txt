@@ -1,7 +1,25 @@
 1: Why did you choose the tools, libraries, and language you used for the coding exercise?
 
+I chose to use node.js due to its scalability and performance. The non-blocking I/O model allows many simultaneous connections.
+Because Fetch will deal with more than 7 million receipts per day (I also applied to the ML intern in fetch so I get the data),
+I need to make sure that the tool should be able to handle large requests. Also, JavaScript may run faster compared to Python. 
+
+Moreover, I implemented the Flask app before in one of my projects (https://www.overleaf.com/read/vdccrfhtqnfv).
+I would love to build my skillsets by learning a new tool. Also, the html page(frontend) and node.js(backend) can both use javascript as the script.
+I can make them consistent by doing this way. 
 
 2: What are the advantages and disadvantages of your solution?
 
+Advantages: The node.js and express framework are perfect for receiving and replying in the JSON file. 
+
+Disadvantages: Due to the time limits, I didn't integrate the SQLite database into the server. 
+That's been said, if we shut down the server, all the data will disappear.
+Adding the SQLite database in the ORM way will be the next step.
 
 3: What has been a favorite school/personal project thus far? What about it that challenged you?
+My favorite school project is in one of my machine learning classes, where we need to classify the images using a neural network. 
+Seeing the accuracy the model provides is inspiring and satisfying. It challenged me because our university only taught Java to new CS students. 
+I began programming during my freshman year, and I never learned any other languages before. However, Python is necessary to implement many machine learning algorithms.
+I ended up learning Python by myself. I watched the tutorial videos and tried to find the similarity between Python and Java. 
+I gradually realized that learning new languages in a short time would be a necessary skill for my future career. Asking questions in the group project and learning from my peers also helped a lot.
+This resulted in my A grade in that class. The class instructor also sends me an offer to be a peer mentor in that class later. 
