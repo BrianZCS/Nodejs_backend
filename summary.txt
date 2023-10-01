@@ -1,22 +1,7 @@
-# Frontend HTML Page
+1: Why did you choose the tools, libraries, and language you used for the coding exercise?
 
-index.html is the page that the user can use to add points, spend points, and check balance. 
 
-# Backend Node.js
+2: What are the advantages and disadvantages of your solution?
 
-index.js is the backend implementation. The server will store all the points and trace the spending of points. 
 
-# Method to Run the server
-
-```
-node index.js
-```
-
-The server will be running on the localhost:8000. 
-
-# Requirements
-```
-npm init -yes
-npm install express
-npm i cors   
-```
+3: What has been a favorite school/personal project thus far? What about it that challenged you?
