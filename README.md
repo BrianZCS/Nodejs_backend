@@ -9,8 +9,8 @@ index.js is the backend implementation. The server will store all the points and
 
 # Three different functions in the application
 1:http://localhost:8000/add \
-2:http://localhost:8000/spend\
-3:http://localhost:8000/balance \
+2:http://localhost:8000/spend \
+3:http://localhost:8000/balance 
 
 # Method to Run the server
 
